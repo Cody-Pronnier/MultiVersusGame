@@ -20,10 +20,9 @@ namespace MultiVersusGame.utils
             col = 0;
         }
 
-        public void DisplayGrid()
+        public string DisplayGrid()
         {
             Console.WriteLine();
-            Console.WriteLine("Sélectionnez une option en utilisant les flèches du clavier (haut/bas/gauche/droite) et appuyez sur Entrée pour valider :");
             Console.WriteLine();
             Console.WriteLine();
 
@@ -70,9 +69,8 @@ namespace MultiVersusGame.utils
                 else if (key.Key == ConsoleKey.Enter)
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("\nVous avez sélectionné : " + options[row, col]);
-
-                    break;
+                    return options[row, col];
+                    
                 }
             }
         }

@@ -23,6 +23,7 @@ namespace MultiVersusGame
 
         public void Attaquer(Personnage cible)
         {
+            Console.WriteLine();
             // Calculer les dégâts infligés en fonction de la force et de la défense
             int degats = Math.Max(0, Force - cible.Defense);
 
@@ -30,12 +31,14 @@ namespace MultiVersusGame
 
             // Appliquer les dégâts à la cible
             cible.SubirDegats(degats);
+            
+
         }
 
         public void Afk()
         {
-
-            Console.WriteLine($"{Nom} passe son tour (le gros gland) !");
+            Console.WriteLine();
+            Console.WriteLine($"{Nom} passe son tour!");
 
         }
 
